@@ -49,14 +49,36 @@ namespace forces
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double force = double.Parse(textBox1.Text);
-            double angle = double.Parse(textBox2.Text);
+            try
 
-            double fx = force * cos(angle);
-            double fy = force * sin(angle);
+            {
+                double force = double.Parse(textBox1.Text);
+                double angle = double.Parse(textBox2.Text);
 
-            MessageBox.Show("fx =" + fx + " N");
-            MessageBox.Show("fy =" + fy + " N");
+                double fx = force * cos(angle);
+                double fy = force * sin(angle);
+
+                MessageBox.Show("fx =" + fx + " N");
+                MessageBox.Show("fy =" + fy + " N"); 
+           
+            }
+            catch
+            {
+                MessageBox.Show(" error");
+            }
+            
+            
+
+            
+            
+
+          
+   
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
